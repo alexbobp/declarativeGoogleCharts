@@ -6,12 +6,14 @@ You can import this js file instead of importing google charts directly, and the
 This is not intended as a library to use as-is, but as a starting point.  Look at the chartDefaults assignment on line 10.  Here, you can the default parameters appropriate to your webapp, for any chart types you want to support, and add in more chart types as desired.  You can make multiple chart type definitions that are backed by the same google chart api class, if you want to have dramatically different default values.
 
 You can then use your charts like this, providing data and overridden options in a declarative style:
+~~~~
     <column_chart
             data='[["Date","Red","Orange"],
                 ["11/6",0.1,0.3],["11/7",0.25,0.04],["11/8",0.08,0.2],
                 ["11/9",0.1,0.3],["11/10",0.25,0.04],["11/11",0.08,0.2]]'
             options='{"bar": {"width": 20}, "chartArea": { "height": "90%" }}'
     ></column_chart>
+~~~~
 
 Essentially, chartDefaults is defining new html tags you can use, except they are discovered and populated post-pageload by javascript.
 
