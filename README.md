@@ -1,7 +1,12 @@
 # declarativeGoogleCharts
 A simple drop-in javascript to let you better abstract your use of google charts in your webapp
 
-You can import this js file instead of importing google charts directly, and then use a declarative style for defining your table elements, allowing you to populate your json data directly in a template-friendly way, and not write any new javascript for new views.
+You can import this js file after importing google charts, and then use a declarative style for defining your table elements, allowing you to populate your json data directly in a template-friendly way, and not write any new javascript for new views.  Import example:
+~~~~
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="/static/js/declarativeTables.js"></script>
+~~~~
+
 
 This is not intended as a library to use as-is, but as a starting point.  Look at the chartDefaults assignment on line 10.  Here, you can the default parameters appropriate to your webapp, for any chart types you want to support, and add in more chart types as desired.  You can make multiple chart type definitions that are backed by the same google chart api class, if you want to have dramatically different default values.
 
